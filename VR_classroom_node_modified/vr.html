@@ -1,0 +1,139 @@
+  <html>
+  <head>
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+
+
+    <script src="https://unpkg.com/aframe-room-component/dist/aframe-room-component.min.js"></script> 
+    <script src="https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/TGALoader.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+     <a-assets>
+      <a-asset-item id="model-obj" src="/static/obj/boy/model.obj" ></a-asset-item>
+      <a-asset-item id="materials-mtl" src="/static/obj/boy/materials.mtl"></a-asset-item>
+
+    </a-assets>
+
+    <a-assets>
+      <a-asset-item id="t2-obj" src="/static/obj/t2/t2.obj"></a-asset-item>
+      <a-asset-item id="t2-mtl" src="/static/obj/t2/t2.mtl"></a-asset-item>
+
+    </a-assets>
+
+    <rw-room  position="-2 0 -2" material="color:#152">
+<!-- 
+ <a-entity id="boy1" obj-model="obj: /static/obj/boy/model.obj; mtl: /static/obj/boy/materials.mtl"></a-entity><a-entity id="boy1" obj-model="obj: /static/obj/boy/model.obj; mtl: /static/obj/boy/materials.mtl"></a-entity> -->
+<!-- 
+          <a-entity id="boy2" obj-model="obj: /static/obj/boy/model.obj; mtl: /static/obj/boy/materials.mtl" position="1.49654 0.45111 2" rotation="-3.470978322902527 -89.91713157885575 0.2188698777399745"></a-entity>
+          <a-entity id="boy3" obj-model="obj: /static/obj/boy/model.obj; mtl: /static/obj/boy/materials.mtl" position="1.49654 0.45111 2" rotation="-3.470978322902527 -89.91713157885575 0.2188698777399745"></a-entity>
+          <a-entity id="boy4" obj-model="obj: /static/obj/boy/model.obj; mtl: /static/obj/boy/materials.mtl" position="1.49654 0.45111 2" rotation="-3.470978322902527 -89.91713157885575 0.2188698777399745"></a-entity>
+          <a-entity id="boy5" obj-model="obj: /static/obj/boy/model.obj; mtl: /static/obj/boy/materials.mtl" position="1.07881 0.45111 1.84443" rotation="0.49847328176381617 -89.32526617648561 -0.08479775367936183"></a-entity> -->
+
+          
+          <a-entity id="boy5" obj-model="obj: /static/obj/boy/model.obj; mtl: /static/obj/boy/materials.mtl" position="1.56937 0.45111 1.95419"  rotation="-0.4875870836563306 84.92609622547114 0.13407212406061264" camera="active: false ; far: 100; near: 0.685"></a-entity>
+          <a-entity id="boy3" obj-model="obj: /static/obj/boy/model.obj; mtl: /static/obj/boy/materials.mtl" position="1.62988 0.45111 3.13687" rotation="-0.4875870836563306 84.92609622547114 0.13407212406061264"></a-entity>
+
+          <a-entity id="boy4" obj-model="obj: /static/obj/boy/model.obj; mtl: /static/obj/boy/materials.mtl" position="2.65354 0.45111 2" rotation=" -0.4875870836563306 84.92609622547114 0.13407212406061264"></a-entity>
+
+          <a-entity id="boy2" obj-model="obj: /static/obj/boy/model.obj; mtl: /static/obj/boy/materials.mtl" position="2.71747 0.45111 3.13574" rotation="-0.4875870836563306 84.92609622547114 0.13407212406061264"></a-entity>
+          <rw-wall id="1" position="5 0 0" material="color: #eed800">
+           
+           <!--  <a-entity id="teacher" obj-model="obj: /static/obj/t2/t2.obj; mtl: /static/obj/t2/t2.mtl" rotation="-3.130068434799687 -179.20400958306757 1.088619810748564" position="3.43299 1.38382 1.5443" scale="5.72635 3.85629 3.29961" camera="far:  100;  near:  0.1"  raycaster="direction: -0.5184335251252011 -0.10898963723791988 -0.8481438197623112; origin: 1.4557000000000007 1.38382 1.4329900000000007; useWorldCoordinates: true" cursor="fuse: true; rayOrigin: mouse">
+ -->
+              <a-entity id="teacher" obj-model="obj: /static/obj/t2/t2.obj; mtl: /static/obj/t2/t2.mtl" rotation="-0.5082135642810401 -78.81722021378631 -3.2744537991726546" position="0.75021 1.31408 0.68605" scale="5.19598 3.85629 3.11938" camera="far: 100; near: 3.0" raycaster="direction: -0.11231 -0.39879 0.51945; origin: 2.31395 1.31408 -1.24979; useWorldCoordinates: true" cursor="fuse: true; rayOrigin: mouse" tracked-controls-webxr="">
+
+          
+              <a-entity camera look-controls>
+                <a-entity cursor="fuse: true; fuseTimeout: 500"
+                position="0 1 0"
+                geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                material="color: black; shader: flat">
+              </a-entity>
+            </a-entity>
+
+          </a-entity>
+
+
+        <!--     
+            <a-entity camera look-controls wasd-controls>
+            <a-entity position="0 0 -3"
+                geometry="primitive: ring; radiusInner: 0.05; radiusOuter: 0.075;"
+                material="color: cyan; shader: flat"
+                cursor="maxDistance: 30; fuse: true">
+            <a-animation begin="click" easing="ease-in" attribute="scale"
+             fill="forwards" from="0.2 0.2 0.2" to="1 1 1" dur="150"></a-animation>
+            <a-animation begin="fusing" easing="ease-in" attribute="scale"
+             fill="backwards" from="1 1 1" to="0.2 0.2 0.2" dur="1500"></a-animation>
+            </a-entity>
+            </a-entity>
+
+
+          </a-entity>
+        -->
+
+        <a-video id="groot" loop="true" src="/static/groot.mp4" material="side: front" geometry="" rotation="0 90" position="0.07188 1.18972 2.51077" scale="3.09956 2.15937 0.00001" visible=""></a-video>
+
+
+         <!--  <a-entity id="teacher" obj-model="obj: /static/obj/t2/t2.obj; mtl: /static/obj/t2/t2.mtl" rotation="-3.130068434799687 -179.20400958306757 1.088619810748564" position="4.21826 1.79374 0.7447" scale="1.64188 1.74824 1.97058" camera="active: false; far: 100; near: 0.14" raycaster="direction: -0.24650360771746502 -0.2620561213488593 0.9330394207351939; origin: -2.220148720099046 17.840220793224997 -14.489898619489708; useWorldCoordinates: true; far: 50" cursor="fuse: true; rayOrigin: mouse">
+            
+            <a-entity camera="" look-controls="" wasd-controls="" position="" rotation="-17.990874767107854 -45.492848933387386" data-aframe-inspector-original-camera="">
+            <a-entity position="0 0 -3" geometry="primitive: ring; radiusInner: 0.05; radiusOuter: 0.075" material="color: cyan; shader: flat" cursor="fuse: true" raycaster="">
+            <a-animation begin="click" easing="ease-in" attribute="scale" fill="forwards" from="0.2 0.2 0.2" to="1 1 1" dur="150"></a-animation>
+            <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="backwards" from="1 1 1" to="0.2 0.2 0.2" dur="1500"></a-animation>
+            </a-entity>
+            </a-entity>
+
+
+          </a-entity>
+
+         
+        -->
+      </rw-wall>
+      <!-- <a-video src="groot.mp4" autoplay loop="true" autoplay></a-video> -->
+         <!--  <a-assets>
+    <video id="g2" autoplay loop="true" src="groot.mp4"></video>
+  </a-assets> -->
+
+  <rw-wall id="2" position="5 0 5" material="color: #eaefc8">
+    <!-- <a-entity id="teacher" obj-model="obj:/static/obj/archive/Teacher_01.obj; mtl: /static/obj/archive/Teacher_01.mtl"></a-entity> -->
+  </rw-wall>
+  <rw-wall id="3" position="0 0 5" material="color: #eed800"></rw-wall>
+  <rw-wall id="4" material="color: #eaefc8" position="0 0 0">
+
+
+   <rw-floor ></rw-floor>
+
+   <rw-doorhole id="holeA"></rw-doorhole>
+   <rw-doorlink from="#holeA" to="#holeB" position="2.5 0 0"></rw-doorlink>
+
+
+
+ </rw-wall>
+
+ <rw-ceiling material="color: #e5f7f9; ambientOcclusionMap: [object HTMLImageElement]; ambientOcclusionMapIntensity: 1.11" ceiling=""></rw-ceiling>  
+
+
+
+</rw-room>
+
+<rw-room position="0 0 -3">
+  <rw-wall position=" 1 0 -1" material="color:#787"></rw-wall>
+  <rw-wall position=" 1 0  1" material="color:#877">
+    <rw-doorhole id="holeB"></rw-doorhole>
+  </rw-wall>
+
+  <rw-wall position="-1 0  1" material="color:#878"></rw-wall>
+  <rw-wall position="-1 0 -1" material="color:#778"></rw-wall>
+</rw-room>
+     <!-- 
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" static-body></a-plane>
+        -->   <!-- 
+        <a-box log="Hello, Box!"></a-box>
+        <a-sky color="#ECECEC"></a-sky> -->
+      </a-scene>
+    </body>
+    </html>

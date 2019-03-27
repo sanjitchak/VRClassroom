@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ancient-voltage-197719",
+  "private_key_id": "07249859ed039105856a8c971bafe5430849ce6d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC3d1qwUHsrFRPP\nZqgVtaAZFdeqFwzy5ubGcTrTYDV6gYze/q0dFzatkvPFNeKSS5hmPEZvhMUHSfMu\nsBrCpM2qD3MbgDwSwmnm40HYpXX0EpQiN0fK7LnHvwLUuYLFWyTEEAKtnbuQ34Yw\nkVcofMBsIc/cG3tcM1TVE4d6EHfs2sTQr9h5Fllcjkz+NbN2Bl8mJy28N1506FFT\n6SOrdJemW8dJE3zZNt4JuRXiug1/L6IJbEujzIY+aZehGnhBvQzZk4oQ6zkhDJkO\ny4gHGnOqon3Yi/SMUch85MaGK0Z4AhI5JIGjh3NbPdCod0tjaDYP30Oeqj2C3fqR\nb9XjC6vjAgMBAAECggEAGpCwM357zymupCXfqcESTP+SKkFLMTLI8Kv9khTIuZPf\no3xp8Z/mXWy9Wm1qgLdsekU5B7XIV71X9ocuYMe/NeQlzTIcwLSg4/s9EhMnSK+V\n/nxVq2bqoachUE8KRexkHvWYha4kth3/jrHE1op1zFJ7CAp8qsWN/4pj4ANZchSe\nb/Pz1X4V2M9fLxwy6xUsdJz/25EjOZfrDW+4Po7OqzWiiukNNwsOlis2dr0SEuq6\nVrlVyMCkfz2cGX80YXEqatZUCuYLlJd/FIoJo5X5acmQfME2QiKoFkY58VEy7hxl\nSUzStHpkl9bxhLzB75RsS7elmvM/fk3MnCFq1SBNGQKBgQDmpVM1pzkKfrT857i5\nhbTM9VRgWvJqfYrqY1auGVyud33hn4iB+FPbcQzqtDDCORiKjyqi3TQ7AIYqK4UP\ngjVc0Zf/Jb7vIfOulVskL0zWxx3VadcGuC0VAbUHiZFydRov6p6qHkW4lUYmxK3c\n+0zwBbaMeIkrvpBxPq9OrG2C6QKBgQDLolWPbLc4enWCyr1KBsLcV9/HcXSuZjy6\nkquxCM4b0Zyo09cv6b3OGy4ZyGZWL7fNKB6n+kIYVsWfQZ4LkKR2a9vm0uQjniOl\n8BhRdGcWCUX7hu1ItJiI/nZoLEd8tG8RyAL5tLvk0xBaAWZ83u5taLqnPkcYY2gL\nOGUFxpCA6wKBgH0lp4itO54eMkYn1WuUyQ2M8EN4FaECjaWwURAWYtunqn4J+h/L\nhnTDWqbfLrW0FUTZeeD09aouFp47Du/jTuEWOMsQyBEo8vf/wnxXzfGcCOwLicjz\nlkKXsopscqcQMy1cuMrFsj79gBr5DP2ivZRfBTYjEQrTU7yerrCZjrJBAoGAVaFb\nB2f5GCfu2GQ2+zUiphPRx4W/QkM90FszFcwVF/+qOBh1CfHp3gzx8uehmSaRzRTM\n52hGeQOsMM8gDc7ySdYLb+JJC21JolL3dvFTFCIsKpxPld5TsnAHDMFqAlfBySFp\nluXYiV30J1Ulauc4Lgv3SbLXpLrQmr9JRAd+5qcCgYEA35IfZ0aWOtNuzPBBPQpY\n2mie6B+XK9+VJf1Dgd1rPhN8LatlPaB/T2yby5LkQDOBWmrVaQgijITXxHZwkuf7\n4wjZQKt3PRYKUCZwK4fT+VNt7PpSVpQqkYjI4w6dOY8U57gc93zcjKQMC5n/TE8T\nJCKA4IS6TsE4+wxWpGZHp2M=\n-----END PRIVATE KEY-----\n",
+  "client_email": "speechtotext@ancient-voltage-197719.iam.gserviceaccount.com",
+  "client_id": "103686679852970485929",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/speechtotext%40ancient-voltage-197719.iam.gserviceaccount.com"
+}
