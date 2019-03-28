@@ -150,33 +150,4 @@ window.addEventListener('load', () => {
     }
     return false;
   });
-
-  $('.submit').on('click', (event) => {
-  if (!formEl.form('is valid')) {
-    return false;
-  }
-  username = $('#username').val();
-  const roomName = $('#roomName').val().toLowerCase();
-  if (event.target.id === 'create-btn') {
-    createRoom(roomName);
-  } else {
-    joinRoom(roomName);
-  }
-  return false;
-});
-
-// Remote video was added
-webrtc.on('videoAdded', (video, peer) => {
-  const id = webrtc.getDomId(peer);
-  const html = remoteVideoTemplate({ id });
-  if (remoteVideosCount === 0) {
-    remoteVideosEl.html(html);
-  } else {
-    remoteVideosEl.append(html);
-  }
-  $(`#${id}`).html(video);
-  $(`#${id} video`).addClass('ui image medium'); // Make video element responsive
-  remoteVideosCount += 1;
-});
-
 });

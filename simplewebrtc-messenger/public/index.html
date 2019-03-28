@@ -9,75 +9,126 @@
   <style>
     html { margin-top: 20px; }
     #chat-content { height: 180px;  overflow-y: scroll; }
+    .ui header{
+      padding: 20px;
+    }
+
+    body{
+      background-image: url("https://campustechnology.com/~/media/EDU/CampusTechnology/Images/2017/02/20170227%20Whole%20class%20Penn%20State.jpg");
+      background-repeat: no-repeat;
+    }
   </style>
 </head>
 <body>
-  <!-- Main Content -->
+
   <div class="ui container">
-    <h1 class="ui header"><center>VR Classroom</center></h1>
+    <h1 class="ui header"><center>VR Classroom (Live Doubt Section)</center></h1>
     <hr>
-
     <div class="ui two column stackable grid">
+      <div class="ui ten wide column">
+        <div class="ui segment">
 
-        <!-- Chat Section -->
-        <div class="ui ten wide column">
-          <div class="ui segment">
-            <!-- Chat Room Form -->
-            <div class="ui form">
-              <div class="fields">
-                <div class="field">
-                  <label>User Name</label>
-                  <input type="text" placeholder="Enter user name" id="username" name="username">
-                </div>
-                <div class="field">
-                  <label>Room</label>
-                  <input type="text" placeholder="Enter room name" id="roomName" name="roomName">
-                </div>
+          <!-- Chat Room Form -->
+          <div class="ui form">
+            <div class="fields">
+              <div class="field">
+                <label>User Name</label>
+                <input type="text" placeholder="Enter user name" id="username" name="username">
               </div>
-              <br>
-              <div class="ui buttons">
-                <div id="create-btn" class="ui submit orange button">Create Room</div>
-                <div class="or"></div>
-                <div id="join-btn" class="ui submit green button">Join Room</div>
+              <div class="field">
+                <label>Room</label>
+                <input type="text" placeholder="Enter room name" id="roomName" name="roomName">
               </div>
             </div>
-            <!-- Chat Room Messages -->
-            <div id="chat"></div>
+            <br>
+            <div class="ui buttons">
+              <div id="create-btn" class="ui submit orange button">Create Classroom</div>
+              <div class="or"></div>
+              <div id="join-btn" class="ui submit green button">Join Classroom</div>
+            </div>
+          </div>
+
+          <!-- Chat Room Messages -->
+          <div id="chat"></div>
+        </div>
+      </div>
+
+      <!-- Local Camera -->
+      <div class="ui six wide column">
+        <img  id="local-image" class="ui large image" src="images/image.png">
+        <video id="local-video" class="ui large image"  autoplay></video>
+        <h4 class="ui center aligned header" style="margin:0;">
+          Local Camera
+        </h4>
+      </div>
+    </div>
+    
+    <!--Audio setup-->
+    <audio autoplay controls></audio>
+    <div id="options">
+      <input type="checkbox" id="renderLocally" disabled><label for="renderLocally"> Select This</label>
+  </div>
+
+  <div id="buttons">
+      <button id="start">Start</button>
+      <button id="stop" disabled>Stop</button>
+  </div>
+
+  <div id="status"></div>
+  <div id="errorMsg"></div>
+
+    <!--End Audio-->
+
+    <!-- Remote Cameras -->
+    <h3 class="ui center aligned header">Remote Cameras</h3>
+    <div id="remote-videos" class="ui stackable grid">
+      <div class="four wide column">
+        <img class="ui centered medium image" src="images/image.png">
+      </div>
+      <div class="four wide column">
+        <img class="ui centered medium image" src="images/image.png">
+      </div>
+      <div class="four wide column">
+        <img class="ui centered medium image" src="images/image.png">
+      </div>
+      <div class="four wide column">
+        <img class="ui centered medium image" src="images/image.png">
+      </div>
+    </div>
+  </div>
+
+  <!-- TEMPLATES -->
+  <!-- Remote Video Template -->
+  <script id="remote-video-template" type="text/x-handlebars-template">
+    <div id="{{ id }}" class="four wide column">
+      <img class="ui centered medium image" src="images/image.png">
+    </div>
+  </script>
+
+  <!-- Chat Content Template -->
+  <script id="chat-content-template" type="text/x-handlebars-template">
+   {{#each messages}}
+    <div class="event">
+      <div class="label">
+        <i class="icon blue user"></i>
+      </div>
+      <div class="content">
+        <div class="summary">
+          <a href="#"> {{ username }}</a> posted on
+          <div class="date">
+            {{ postedOn }}
           </div>
         </div>
-        <!-- End of Chat Section -->
-      
-        <!-- Local Camera -->
-        <div class="ui six wide column">
-          <h4 class="ui center aligned header" style="margin:0;">
-           <u>Local Camera</u> 
-          </h4>
-          <img id="local-image" class="ui large image" src="images/image.png">
-          <video id="local-video" class="ui large image hidden" autoplay></video>
-        </div>
-      
-      </div>
-      
-      <!-- Remote Cameras -->
-      <h3 class="ui center aligned header"><u>Remote Cameras</u></h3>
-      <div id="remote-videos" class="ui stackable grid">
-        <div class="four wide column">
-          <img class="ui centered medium image" src="images/image.png">
-        </div>
-        <div class="four wide column">
-          <img class="ui centered medium image" src="images/image.png">
-        </div>
-        <div class="four wide column">
-          <img class="ui centered medium image" src="images/image.png">
-        </div>
-        <div class="four wide column">
-          <img class="ui centered medium image" src="images/image.png">
+        <div class="extra text">
+          {{ message }}
         </div>
       </div>
-      
-  </div>
+    </div>
+  {{/each}}
+  </script>
+
   <!-- Chat Template -->
-<script id="chat-template" type="text/x-handlebars-template">
+  <script id="chat-template" type="text/x-handlebars-template">
     <h3 class="ui orange header">Room ID -> <strong>{{ room }}</strong></h3>
     <hr>
     <div id="chat-content" class="ui feed"> </div>
@@ -90,40 +141,16 @@
       <div id="post-btn" class="ui primary submit button">Send</div>
     </div>
   </script>
-  
-<!-- Chat Content Template -->
-<script id="chat-content-template" type="text/x-handlebars-template">
-    {{#each messages}}
-      <div class="event">
-        <div class="label">
-          <i class="icon blue user"></i>
-        </div>
-        <div class="content">
-          <div class="summary">
-            <a href="#"> {{ username }}</a> posted on
-            <div class="date">
-              {{ postedOn }}
-            </div>
-          </div>
-          <div class="extra text">
-            {{ message }}
-          </div>
-        </div>
-      </div>
-    {{/each}}
-  </script>
 
-  <!-- Remote Video Template -->
-<script id="remote-video-template" type="text/x-handlebars-template">
-    <div id="{{ id }}" class="four wide column"></div>
-  </script>
-  
   <!-- Scripts -->
-  <script src="scripts/jquery/dist/jquery.min.js"></script>
   <script src="scripts/jquery/dist/jquery.min.js"></script>
   <script src="scripts/semantic-ui-css/semantic.min.js"></script>
   <script src="scripts/handlebars/dist/handlebars.min.js "></script>
   <script src="scripts/simplewebrtc/out/simplewebrtc-with-adapter.bundle.js"></script>
   <script src="js/app.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="js/webaudioextended.js"></script>
+  <script src="js/audio.js" async></script>
+  <script src="../../../js/lib/ga.js"></script>
 </body>
 </html>

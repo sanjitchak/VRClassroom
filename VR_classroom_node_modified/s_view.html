@@ -7,21 +7,29 @@
   <script src="https://unpkg.com/aframe-room-component/dist/aframe-room-component.min.js"></script>
   <script src="https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/TGALoader.js"></script>
   <script>
-    window.onload = function () {
-
-      var rawFile = new XMLHttpRequest();
-      rawFile.open("GET", "http://localhost:3000/speech-to-text/speech.txt", false);
+   function handleChange(){
+    
+  var oldText = document.getElementById("transcript_text").getAttribute("text");
+ var rawFile = new XMLHttpRequest();
+      rawFile.open("GET", "http://localhost:5000/speech-to-text/speech.txt", false);
       rawFile.onreadystatechange = function () {
         if (rawFile.readyState === 4) {
           if (rawFile.status === 200 || rawFile.status == 0) {
             var allText = rawFile.responseText;
-
-            document.getElementById("transcript_text").setAttribute("text", "color: #f70909; value:" + allText + " ;align: center");
-
+			allText =  "color: #f70909; value:" + allText + " ;align: center"
+              if (oldText != allText)
+	{
+            document.getElementById("transcript_text").setAttribute("text", allText);
+}
           }
         }
       }
       rawFile.send(null);
+ }
+   
+    window.onload = function () {
+           setInterval(handleChange, 50);
+   
     };
   </script>
 </head>
@@ -161,7 +169,7 @@
       <rw-wall id="3" position="0 0 5" material="color: #eed800"></rw-wall>
       <rw-wall id="4" material="color: #eaefc8" position="0 0 0">
         <a-entity id="transcript_text" text="color: #f70909; value: Transcript ;align: center"
-          position="0.47153 1.8839 0.71887" height="50" scale="2.159 3.02913 3.51913"></a-entity>
+          position="0.662 1.892 0.625" height="50" scale="2.159 3.02913 3.51913"></a-entity>
 
         <rw-floor></rw-floor>
 
