@@ -5,6 +5,11 @@
   <title>Registration</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+<style>
+body{
+	background-image: url("https://blog.studentsnepal.com/wp-content/uploads/sites/4/2018/06/boy-with-virtual-reality-kit.png");
+}
+</style>
 <body>
   <div class="header">
   	<h2>Login</h2>

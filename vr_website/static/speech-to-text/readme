@@ -1,1 +1,1 @@
-export GOOGLE_APPLICATION_CREDENTIALS="/home/shubham/VRClassroom/VR_classroom_node_modified/static/speech-to-text/api_project.json"
+export GOOGLE_APPLICATION_CREDENTIALS="/home/shubham/VRClassroom/vr_website/static/speech-to-text/api_project.json"
