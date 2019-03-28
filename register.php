@@ -8,12 +8,27 @@
 
 <style>
 body{
-	background-image: url("https://blog.studentsnepal.com/wp-content/uploads/sites/4/2018/06/boy-with-virtual-reality-kit.png");
+	background-image: url("https://cdn.uploadvr.com/wp-content/uploads/2017/03/rsi-ctt-GearVRLookOutwardScene-1440-VirtualReality-072916.jpeg");
+	background-size:100%;
+}
+
+h1{
+color:red;
+padding:10px;
+}
+
+.btn{
+width:40%;
+border-radius:40px;
+}
+
+form{
+opacity:0.9
 }
 	</style>
 <body>
   <div class="header">
-  	<h2>Register</h2>
+  	<h1>REGISTER</h1>
   </div>
 	
   <form method="post" action="register.php">
