@@ -13,5 +13,5 @@ Google speech to text api.
 Paper on the project :-  
 [VR Classroom Paper](https://github.com/sanjitchak/VRClassroom/blob/master/VR%20Classroom.pdf)  
 
-Published in IJRAR-International Journal ofResearch and Analytical Reviews:-  
+Published in IJRAR-International Journal of Research and Analytical Reviews:-  
 [Journal Link- Go to page 215 in the pdf, originally in page-201](http://ijrar.com/uploads/conference/ijrar_46.pdf)  
