@@ -1,6 +1,6 @@
 # VRClassroom
 
-This was the project for M. S. Engineering College Hackathon . Came top 1.
+This was the project for M. S. Engineering College Hackathon . Came in top 1 rank.
 
 
 It is a teaching platform and doubt clearing platform interactively within VR.  
